@@ -1,4 +1,4 @@
-<h1>La To Do List d'UpSport</h1>
+<h1>Prochains rendez-vous Up Sport</h1>
 <div class="row">
 <?php
     $posts = get_posts();
