@@ -26,6 +26,27 @@ else {
 
 <hr>
 
+<h4>Commentaires</h4>
+
+<?php
+    $responses = get_comments();
+
+    if($responses != false){
+        foreach($responses as $response) {
+            ?>
+            <blockquote>
+                <strong><?= $response->name ?> (<?= date("d/m/Y", strtotime($response->date))?>)</strong>
+                <p><?= nl2br($response->comment) ?></p>
+            </blockquote>
+            <?php
+        } 
+    }
+    else {
+        echo "Si vous avez une question, n'hésitez pas à la poser.";
+    }
+
+?>
+
 <h4>Soumettre une question : </h4>
 
 <?php
