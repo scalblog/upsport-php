@@ -1,5 +1,7 @@
 <?php
 
+    session_start();
+
     $dbhost = 'localhost';
     $dbname = 'todolistupsport';
     $dbuser = 'root';

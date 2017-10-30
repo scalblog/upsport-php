@@ -1,3 +1,10 @@
+<?php
+    if(isset($_SESSION['admin'])){
+        header("Location:index.php?page=dashboard");
+    }
+
+?>
+
 <div class="row">
     <div class="col l4 m6 s12 offset-l4 offset-m3">
         <div class="card-panel">
@@ -39,7 +46,8 @@
                         <?php
                     }
                     else {
-                        echo "Pas d'erreurs.";
+                        $_SESSION['admin'] = $email;
+                        header("Location:index.php?page=dashboard");
                     }
                 }
             ?>
